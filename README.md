@@ -21,3 +21,20 @@ A Python desktop application built with **Tkinter** that collects student detail
 - Clear button to reset all input fields  
 
 ## 🖥️ Sample Output (in `report_card.txt`)
+Name:Aarav Sharma
+Roll No:105
+Total:261.0
+Percentage:87.0
+Grade:B
+
+## 🚀 How to Run
+1. Make sure Python 3 is installed.  
+2. Clone or download the repo.  
+3. In the project directory, run:
+   ```bash
+   python report_card.py
+4. Fill in all fields (name, roll number, and marks).
+5. Click Generate report:
+   -If input is invalid, an error popup appears and a message shows below.
+   -If valid, the report is written to report_card.txt and a confirmation label appears.
+6. Click Clear to reset the form for the next student.
