@@ -1,0 +1,19 @@
+
+Name:Hunai
+Roll No:3
+Total:114.0
+Percentage:38.0
+Grade:F
+--------------------------------------------
+Name:Harsh
+Roll No:1
+Total:202.0
+Percentage:67.33333333333333
+Grade:C
+--------------------------------------------
+Name:Myra
+Roll No:1
+Total:300.0
+Percentage:100.0
+Grade:A
+--------------------------------------------
