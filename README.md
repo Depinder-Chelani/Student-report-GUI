@@ -1,24 +1,23 @@
- GUI-Based Student Report Card Generator
+ # 🎓 GUI-Based Student Report Card Generator
 
-A Python desktop application built with **Tkinter** that lets you enter student details and marks, calculates total, percentage, and grade, and saves the report to a file for record keeping.
+A Python desktop application built with **Tkinter** that collects student details and marks, validates input, computes total/percentage/grade, displays status messages, and appends each report to a file.
 
-## Features
-- Input student name and roll number
-- Enter marks for English, Science, and Math
+## 🔧 Features
+- Input student name and roll number  
+- Enter marks for English, Science, and Math  
 - Validation for:
-  - Empty fields
-  - Numeric marks
-  - Marks in the range 0–100
-- Calculates total marks, percentage, and grade
-- Appends the report to a file (`report_card.txt`)
-- Clear/reset button to wipe inputs
+  - Empty fields  
+  - Numeric marks  
+  - Marks between 0 and 100  
+- Calculates total marks and percentage  
+- Determines grade based on percentage:
+  - A: 90+  
+  - B: 75–89  
+  - C: 60–74  
+  - D: 40–59  
+  - F: Below 40  
+- Displays status/errors via label and popups (`messagebox`)  
+- Appends the generated report to `report_card.txt`  
+- Clear button to reset all input fields  
 
-## Tech Stack
-1.Ensure you have Python 3 installed.  
-2.Clone or download the repository.  
-3.Open a terminal in the project directory and run:
-   ```bash
-   python report_card.py
-4.Fill in the student details and marks.
-5.Click Generate Report and save the report to report_card.txt.
-6.Click Clear to reset the form for the next entry.
+## 🖥️ Sample Output (in `report_card.txt`)
