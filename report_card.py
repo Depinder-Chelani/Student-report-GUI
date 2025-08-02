@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
+import datetime
 
 def clear_fields():
    text_input1.delete(0,tk.END)
@@ -8,6 +9,7 @@ def clear_fields():
    text_input4.delete(0,tk.END)
    text_input5.delete(0,tk.END)
    label9.config(text= "")
+   text_input1.focus_set()
 
 def generate_report():
     
@@ -22,10 +24,13 @@ def generate_report():
         label9.config(text="Field is empty")
         return
     
-    
-       
-    if (float(english)>= 0 and float(english)<= 100) and (float(science) >= 0 and float(science)<= 100) and (float(math) >= 0 and float(math) <= 100) :
-        total = float(english) + float(science) +float(math)
+    try:
+
+      english1 = float(english)
+      science1 = float(science)
+      math1 = float(math)
+      if (english1 >= 0 and english1 <= 100) and (science1 >= 0 and science1<= 100) and (math1 >= 0 and math1 <= 100) :
+        total = english1 + science1 +math1
            
         percentage = total /3
         if percentage >= 90:
@@ -38,9 +43,13 @@ def generate_report():
            grade = "D"
         else:
            grade = "F"
-
+      
+        current_time = datetime.datetime.now()
+        formatted_timestamp = current_time.strftime("%Y-%m-%d %H:%M:%S")
+        
         with open("report_card.txt","a") as file:
             file.write("\n")
+            file.write("Timestamp:"+formatted_timestamp+"\n")
             file.write("Name:"+name+"\n")
             file.write("Roll No:"+rollno+"\n")
             file.write("Total:"+str(total)+"\n")
@@ -51,10 +60,15 @@ def generate_report():
         label9.config(text="Report generated in report_card.txt")
 
         
-    else:
-      messagebox.showerror("Error", "Marks should be between 1 - 100!")
-      label9.config(text="Marks should be between 1 - 100")
-      return
+      else:
+         messagebox.showerror("Error", "Marks should be between 0 - 100!")
+         label9.config(text="Marks should be between 1 - 100")
+         return
+    except ValueError:
+       messagebox.showerror("Error", "Marks should be numeric")
+       label9.config(text="Marks should be numeric")
+       return
+
       
        
 
